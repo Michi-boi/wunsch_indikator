@@ -116,3 +116,16 @@ h1,h2,h3{overflow-wrap:break-word}.hero-copy,.section-heading>*,.service-grid>*,
 
 .contact-direct .contact-details{max-width:none;padding:28px 32px;background:linear-gradient(115deg,#1c3347,#162a34);border:1px solid #436780;border-left:4px solid var(--accent);border-radius:8px;box-shadow:0 12px 35px #0002}.contact-direct h2{color:var(--accent)}.contact-direct .contact-intro{max-width:780px;margin-bottom:14px}.contact-options{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:32px}.contact-options .contact-line{min-width:0;padding:14px 0;border-top-color:#78bdff40}.contact-options .contact-line strong{display:block;line-height:1.35;font-weight:600;padding-right:28px}.contact-options .contact-line[href^="mailto:"] strong{font-size:clamp(19px,2.6vw,30px);color:var(--text)}.contact-options .contact-line>span:last-child{top:50%;transform:translateY(-50%);color:var(--accent)}.contact-actions{margin-top:12px}.contact-actions .button{min-width:235px}
 @media(max-width:640px){.contact-direct .contact-details{padding:22px 20px}.contact-options{grid-template-columns:1fr;gap:0}.contact-actions .button{width:100%;min-width:0}}
+
+/* E-Mail und Pfeil bleiben als eine Einheit in der gemeinsamen Fußzeile. */
+.footer-top .footer-email{display:inline-flex;align-items:center;gap:8px;flex-shrink:0;white-space:nowrap;line-height:1.5}
+
+.site-reviews blockquote a{display:inline-flex;align-items:center;gap:8px;min-height:40px;font-size:13px;line-height:1.5}
+@media(max-width:640px){.contact-options .contact-line[href^="mailto:"] strong{font-size:clamp(14px,4.1vw,19px);white-space:nowrap;overflow-wrap:normal}}
+
+/* Lange Seitentitel sollen auf kleinen Handys keine einzelnen Buchstaben abtrennen. */
+@media(max-width:380px){.subhero h1{font-size:clamp(29px,8.2vw,32px)}}
+
+/* Vier Bewertungen: kurze und lange Texte paarweise in gleich hohen Karten. */
+.site-reviews .review-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 20px;align-items:stretch}.site-reviews blockquote{display:flex;flex-direction:column;border-radius:8px}.site-reviews blockquote a{margin-top:auto;align-self:flex-start}
+@media(max-width:640px){.site-reviews .review-grid{grid-template-columns:minmax(0,1fr);gap:12px}}
