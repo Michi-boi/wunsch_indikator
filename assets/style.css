@@ -136,6 +136,6 @@ h1,h2,h3{overflow-wrap:break-word}.hero-copy,.section-heading>*,.service-grid>*,
 .collection-card>div,.indicator-collection .collection-card>div{border-radius:var(--radius-card)}
 .button,.header nav .nav-contact,.flow-node,.editor-launch{border-radius:var(--radius-control)}
 @media(max-width:1100px){.header nav{border-radius:0 0 var(--radius-card) var(--radius-card)}}
-/* Opaquer Kopfbereich und eigener Mischhintergrund lassen das schwarze Logo nahtlos verschmelzen. */
-.header{background:var(--bg);backdrop-filter:none}
-.brand.brand-original{background:var(--bg);isolation:isolate}
+/* Das freigestellte Original-Logo bewahrt die transparente, weichgezeichnete Kopfzeile. */
+.brand.brand-original{background:transparent}
+.brand.brand-original img{mix-blend-mode:normal}
