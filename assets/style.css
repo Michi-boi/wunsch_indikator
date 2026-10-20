@@ -129,3 +129,13 @@ h1,h2,h3{overflow-wrap:break-word}.hero-copy,.section-heading>*,.service-grid>*,
 /* Vier Bewertungen: kurze und lange Texte paarweise in gleich hohen Karten. */
 .site-reviews .review-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 20px;align-items:stretch}.site-reviews blockquote{display:flex;flex-direction:column;border-radius:8px}.site-reviews blockquote a{margin-top:auto;align-self:flex-start}
 @media(max-width:640px){.site-reviews .review-grid{grid-template-columns:minmax(0,1fr);gap:12px}}
+
+/* Einheitliche weiche Ecken für eigenständige Karten, Bilder und Bedienelemente. */
+:root{--radius-card:10px;--radius-control:8px}
+.service-card,.collection-card,.project-image,.home-benefits-panel,.terminal,.bot-diagram,.code-note,.platform-comparison,.tv-benefits,.faq-hint,.partner-hint,.mt5-reasons .explanation,.faq-page .faq-answer,.process-grid>li,.site-reviews blockquote,.contact-direct .contact-details,.portrait,.contact-person img,.archive-image,.archive-gallery.archive-gallery-large .archive-image,.tv-example img,.tv-example-link,.archive-inline-chart img,.project-case>img,.mt5-case-image img,.mt5-case-animated,.video-play,.video-player{border-radius:var(--radius-card)}
+.collection-card>div,.indicator-collection .collection-card>div{border-radius:var(--radius-card)}
+.button,.header nav .nav-contact,.flow-node,.editor-launch{border-radius:var(--radius-control)}
+@media(max-width:1100px){.header nav{border-radius:0 0 var(--radius-card) var(--radius-card)}}
+/* Opaquer Kopfbereich und eigener Mischhintergrund lassen das schwarze Logo nahtlos verschmelzen. */
+.header{background:var(--bg);backdrop-filter:none}
+.brand.brand-original{background:var(--bg);isolation:isolate}
