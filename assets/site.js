@@ -4,18 +4,6 @@
   const reduced=matchMedia('(prefers-reduced-motion: reduce)');
   const editing=new URLSearchParams(location.search).get('bearbeiten')==='1';
   root.classList.toggle('is-editing',editing);
-  document.querySelectorAll('button[data-video]').forEach(button=>button.addEventListener('click',()=>{
-    if(editing||!/^[A-Za-z0-9_-]{11}$/.test(button.dataset.video))return;
-    const player=document.createElement('iframe');
-    player.className='video-player';
-    player.src='https://www.youtube-nocookie.com/embed/'+button.dataset.video+'?autoplay=1&rel=0';
-    player.title=button.dataset.videoTitle||'Erklärvideo';
-    player.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';
-    player.allowFullscreen=true;
-    player.referrerPolicy='strict-origin-when-cross-origin';
-    button.replaceWith(player);
-    player.focus();
-  }));
   const local=['127.0.0.1','localhost','::1','[::1]'].includes(location.hostname);
   const privatePreview=location.hostname==='wunsch-indikator-neu.lofty-grebe-4026.chatgpt.site';
   if((local||privatePreview)&&!editing&&window.self===window.top){
