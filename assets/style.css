@@ -139,3 +139,16 @@ h1,h2,h3{overflow-wrap:break-word}.hero-copy,.section-heading>*,.service-grid>*,
 /* Das freigestellte Original-Logo bewahrt die transparente, weichgezeichnete Kopfzeile. */
 .brand.brand-original{background:transparent}
 .brand.brand-original img{mix-blend-mode:normal}
+.archive-link-break{flex-basis:100%;height:0}
+@media(max-width:640px){.archive-link-break{display:none}}
+.partner-pricing{margin:24px 0}.partner-pricing h2{font-size:clamp(25px,3vw,34px);margin-bottom:16px}.partner-price-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;max-width:460px}.partner-price-option{padding:16px 20px;border:1px solid #41617a;border-radius:var(--radius-card);background:linear-gradient(120deg,#1c3347,#162a34)}.partner-price-option .partner-price-amount{font-size:clamp(34px,4vw,46px);font-weight:600;line-height:1.2;color:var(--text);margin:0 0 6px}.partner-price-option .partner-price-term{font-size:17px;color:var(--accent);margin:0}
+@media(max-width:480px){.partner-price-grid{gap:10px}.partner-price-option{padding:14px 16px}.partner-price-option .partner-price-amount{font-size:32px}.partner-price-option .partner-price-term{font-size:15px}}
+
+/* Die PDF-FAQ bleibt als durchsuchbarer Originaltext auch auf kleinen Displays lesbar. */
+.pdf-faq-hero>p:not(.eyebrow){max-width:900px}.pdf-faq-actions{flex-wrap:wrap}
+.pdf-faq-layout{padding-bottom:32px}.pdf-faq-toc{padding:18px 22px;border:1px solid var(--line);border-radius:var(--radius-card);background:var(--surface,#15252b);margin-bottom:24px}
+.pdf-faq-toc summary{cursor:pointer;color:var(--text);font-weight:600}.pdf-faq-toc nav{display:flex;flex-wrap:wrap;gap:8px 20px;padding-top:14px}.pdf-faq-toc a{color:var(--accent);font-size:14px;line-height:1.5}
+.pdf-faq-document{max-width:900px;margin:0 auto;overflow-wrap:break-word}.pdf-faq-page{padding:24px 0;border-bottom:1px solid var(--line);scroll-margin-top:115px}.pdf-faq-page-label{font:11px var(--mono,monospace);letter-spacing:.12em;color:var(--muted);margin:0 0 18px}
+.pdf-faq-document h2{font-size:clamp(24px,3vw,34px);line-height:1.3;color:var(--accent);margin:24px 0 18px;scroll-margin-top:120px}.pdf-faq-document h3{font-size:clamp(19px,2.2vw,24px);line-height:1.5;margin:24px 0 14px;overflow-wrap:break-word}.pdf-faq-document p:not(.pdf-faq-page-label){font-size:18px;line-height:1.8;margin:0 0 16px;max-width:none}.pdf-faq-bullet{padding-left:1em;text-indent:-1em}
+.pdf-faq-figure{width:min(100%,var(--figure-width));margin:20px 0 24px}.pdf-faq-figure a{display:block;border-radius:var(--radius-card);overflow:hidden;border:1px solid var(--line);background:#1e222d}.pdf-faq-figure a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}.pdf-faq-figure img{display:block;width:100%;height:auto;object-fit:contain}.pdf-faq-download-end{display:flex;gap:16px;flex-wrap:wrap;max-width:900px;margin:28px auto 0}
+@media(max-width:640px){.pdf-faq-toc{padding:16px}.pdf-faq-toc nav{gap:8px 14px}.pdf-faq-document p:not(.pdf-faq-page-label){font-size:16px;line-height:1.75}.pdf-faq-figure{margin:16px 0 20px}.pdf-faq-page{padding:20px 0}.pdf-faq-actions .button,.pdf-faq-download-end .button{width:100%;min-width:0;justify-content:space-between}}
